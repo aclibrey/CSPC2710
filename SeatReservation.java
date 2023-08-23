@@ -49,10 +49,10 @@ public class SeatReservation {
   @Override
   public String toString() {
     return "SeatReservation{" + 
-    "flightDesignator=" + (flightDesignator == null ? "null" : flightDesignator) + 
-    ", flightDate=" + (flightDate == null ? "null" : flightDate) + 
-    ", firstName=" + (firstName == null ? "null" : firstName) + 
-    ", lastName=" + (lastName == null ? "null" : lastName) + 
+    "flightDesignator=" + (flightDesignator == null ? "null" : flightDesignator) + ", " +
+    "flightDate=" + (flightDate == null ? "null" : flightDate) + ", " +
+    "firstName=" + (firstName == null ? "null" : firstName) + ", " +
+    "lastName=" + (lastName == null ? "null" : lastName) + 
     '}';
   }
   
