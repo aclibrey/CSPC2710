@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import java.time.LocalDate;
 
 public class SeatReservation {
@@ -12,12 +12,12 @@ public class SeatReservation {
     return flightDesignator;  
   }
 
-  public void setFlightDesignator(String flightDesignator) {
-    if (flightDesignator == null)
-       throw new IllegalArgumentException("flight designator cannot be null");
-    this.flightDesignator = flightDesignator;
- }
-
+  public void setFlightDesignator(String fd) {
+    if(fd.length() < 4 || fd.length() > 6) {
+      throw new IllegalArgumentException("Invalid FlightDesignator Length");
+    }
+    this.flightDesignator = fd;
+  }
 
   public LocalDate getFlightDate() {
     return flightDate;
@@ -54,6 +54,3 @@ public class SeatReservation {
   }
   
 }
-=======
-
->>>>>>> 5d1da1379f93b1ed44ce96abcc898c9e406c7405
