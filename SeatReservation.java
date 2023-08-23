@@ -13,6 +13,9 @@ public class SeatReservation {
   }
 
   public void setFlightDesignator(String fd) {
+    if (fd == null) {
+      throw new IllegalArgumentException("FlgihtDesignator cannot be null");
+    }
     if(fd.length() < 4 || fd.length() > 6) {
       throw new IllegalArgumentException("Invalid FlightDesignator Length");
     }
@@ -46,11 +49,11 @@ public class SeatReservation {
   @Override
   public String toString() {
     return "SeatReservation{" + 
-      "flightDesignator=" + (flightDesignator == null ? "null" : flightDesignator) + 
-      ", flightDate=" + (flightDate == null ? "null" : flightDate) + 
-      ", firstName=" + (firstName == null ? "null" : firstName) +
-      ", lastName=" + (lastName == null ? "null" : lastName) +
-      '}';
+    "flightDesignator=" + (flightDesignator == null ? "null" : flightDesignator) + 
+    ", flightDate=" + (flightDate == null ? "null" : flightDate) + 
+    ", firstName=" + (firstName == null ? "null" : firstName) + 
+    ", lastName=" + (lastName == null ? "null" : lastName) + 
+    '}';
   }
   
 }
