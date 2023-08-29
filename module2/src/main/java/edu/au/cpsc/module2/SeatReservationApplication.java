@@ -27,19 +27,16 @@ public class SeatReservationApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         seatReservation = new SeatReservation();
-        // Fill seatReservation with sample data
         seatReservation.setFlightDesignator("AU123");
         seatReservation.setFirstName("Adam");
         seatReservation.setLastName("Clibrey");
         seatReservation.setNumberOfBags(1);
         seatReservation.makeNotFlyingWithInfant();
 
-        // Create layout
         BorderPane root = new BorderPane();
         GridPane grid = new GridPane();
         root.setCenter(grid);
 
-        // Create labels and controls
         grid.add(new Label("Flight Designator:"), 0, 0);
         grid.add(flightDesignatorField, 1, 0);
 
@@ -62,7 +59,6 @@ public class SeatReservationApplication extends Application {
         numberOfPassengersField.setEditable(false);
         grid.add(numberOfPassengersField, 1, 6);
 
-        // Create HBox for buttons
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.TOP_RIGHT);
         Button saveButton = new Button("Save");
@@ -70,7 +66,6 @@ public class SeatReservationApplication extends Application {
         hBox.getChildren().addAll(saveButton, cancelButton);
         root.setBottom(hBox);
 
-        // Add behavior
         flyingWithInfantCheckBox.setOnAction(e -> {
             if (flyingWithInfantCheckBox.isSelected()) {
                 numberOfPassengersField.setText("2");
@@ -102,7 +97,6 @@ public class SeatReservationApplication extends Application {
             Platform.exit();
         });
 
-        // Show the stage
         updateUI();
         Scene scene = new Scene(root, 400, 300);
         stage.setTitle("Seat Reservation");
