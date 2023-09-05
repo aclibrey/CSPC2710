@@ -12,6 +12,7 @@ public class SeatReservation {
     return flightDesignator;  
   }
 
+<<<<<<< Updated upstream
   public void setFlightDesignator(String fd) {
     if (fd == null) {
       throw new IllegalArgumentException("FlgihtDesignator cannot be null");
@@ -21,6 +22,23 @@ public class SeatReservation {
     }
     this.flightDesignator = fd;
   }
+=======
+<<<<<<< HEAD
+  public void setFlightDesignator(String flightDesignator) {
+    if (flightDesignator == null)
+       throw new IllegalArgumentException("flight designator cannot be null");
+    this.flightDesignator = flightDesignator;
+ }
+
+=======
+  public void setFlightDesignator(String fd) {
+    this.flightDesignator = fd;
+    if(fd.length() < 4 || fd.length() >6) }
+      throw new IllegalArgumentException ("Invalid FlightDesignator Length");
+    }
+  }
+>>>>>>> fce596c729c806eb9bdee4666697dca32ad443c7
+>>>>>>> Stashed changes
 
   public LocalDate getFlightDate() {
     return flightDate;
